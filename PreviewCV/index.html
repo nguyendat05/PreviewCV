@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự Án Web Mới</title>
+    <title> Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Chào mừng đến với trang web của tôi!</h1>
-    <button onclick="sayHello()">Nhấn vào đây</button>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-left">Nguyen Dinh Tung</div>
+            <div class="navbar-right">
+                <div class="menu-btn" id="menu-icon">
+                    <div class="menu-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overlay" id="overlay">
+                <div class="overlay-container">
+                    <div class="overlay-left" id="overlay-left">
+                        <span>Nguyen Dinh Tung</span>
+                        <p>A freelance graphic designer & UI/UX designer</p>
+                    </div>
+
+                    <div class="overlay-right">
+                        <div class="overlay-option">
+                            <span>About Me</span>
+                        </div>
+                        <div class="overlay-option">
+                            <span>Contact Me</span>
+                        </div>
+                        <div class="overlay-option">
+                            <span>Selected Work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="content-container">
+                <h1 class="title"> <span class="script-text">Table Of Content</span> </h1>
+                <p class="subtitle">Nguyen Dinh Tung</p>
+                <hr class="divider">
+
+                <div class="button-group">
+                    <div class="button about-me">ABOUT ME</div>
+                    <div class="button selected-work">SELECTED WORK</div>
+                    <div class="button contact">CONTACT</div>
+                    <div class="button skills">SKILLS</div>
+                    <div class="button education">EDUCATION</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
