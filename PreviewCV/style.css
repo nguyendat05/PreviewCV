@@ -1,7 +1,7 @@
 body {
     background-color: #f9f3e8;
     display: flex;
-    height: 100vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -12,10 +12,11 @@ body {
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: auto;
     text-align: center;
+    box-sizing: border-box;
 }
 
 
@@ -25,13 +26,15 @@ body {
     align-items: center;
     border-bottom: 1px solid #4b1c1c;
     color: #8b0000;
-    padding: 15px 30px;
-    height: 3%;
+    height: 5%;
+    box-sizing: border-box;
 }
 
 .navbar-left {
     font-weight: bold;
     font-size: 1.2rem;
+    padding: 15px 30px;
+
 }
 
 .menu-icon {
@@ -39,7 +42,7 @@ body {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px 30px;
 }
 
 .menu-icon div {
@@ -77,7 +80,7 @@ body {
     height: 100%;
     justify-content: center;
     text-align: center;
-    gap : 40px
+    gap: 40px
 }
 
 /* Phần bên trái */
@@ -92,12 +95,12 @@ body {
     cursor: pointer;
 }
 
-.overlay-left > span {
+.overlay-left>span {
     font-size: 50px;
     margin: 0;
 }
 
-.overlay-left > p {
+.overlay-left>p {
     margin-top: 10px;
     font-size: 23px;
 }
@@ -107,8 +110,10 @@ body {
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: start; /* Căn giữa theo chiều dọc */
-    gap: 20px; /* Tạo khoảng cách đều giữa các mục */
+    justify-content: start;
+    /* Căn giữa theo chiều dọc */
+    gap: 20px;
+    /* Tạo khoảng cách đều giữa các mục */
     padding: 100px 0;
 }
 
@@ -118,7 +123,8 @@ body {
     text-align: center;
     font-size: 1.5rem;
     cursor: pointer;
-    position: relative; /* Cần thêm để đặt viền ảo */
+    position: relative;
+    /* Cần thêm để đặt viền ảo */
     transition: background-color 0.3s,
 }
 
@@ -135,17 +141,21 @@ body {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 1px; /* Độ dày viền */
-    background-color: transparent; /* Mặc định ẩn viền */
+    height: 1px;
+    /* Độ dày viền */
+    background-color: transparent;
+    /* Mặc định ẩn viền */
     transition: background-color 0.3s;
 }
 
 .overlay-option::before {
-    top: 0; /* Viền trên */
+    top: 0;
+    /* Viền trên */
 }
 
 .overlay-option::after {
-    bottom: 0; /* Viền dưới */
+    bottom: 0;
+    /* Viền dưới */
 }
 
 .overlay-option:hover span {
@@ -154,13 +164,16 @@ body {
 
 .overlay-option:hover::before,
 .overlay-option:hover::after {
-    background-color: #000; /* Hiển thị viền trên/dưới khi hover */
+    background-color: #000;
+    /* Hiển thị viền trên/dưới khi hover */
 }
 
 .content {
-    height: 90%;
+    height: 95%;
     width: 100%;
+    box-sizing: border-box;
     overflow: auto;
+    padding-bottom: 5%;
 }
 
 .content-container {
@@ -179,21 +192,20 @@ body {
     color: #b0003a;
     font-family: 'Dancing Script', cursive;
     font-size: 3rem;
-    position: relative;
     top: -10px;
 }
 
 .subtitle {
     color: #000;
-    margin-top: 5px;
     font-size: 1.2rem;
 }
 
 .divider {
-    width: 80%;
-    margin: 20px auto;
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 50px;
     border: none;
-    border-top: 2px solid #000;
+    border-top: 1px solid #b0003a;
 }
 
 .button-group {
@@ -216,12 +228,123 @@ body {
     min-width: 150px;
 }
 
-.about-me { background-color: #B22222; }  /* Đỏ đậm - About Me */
-.selected-work { background-color: #004d40; }  /* Xanh đậm - Selected Work */
-.contact { background-color: #F9A825; color: #333; }  /* Vàng - Contact */
-.skills { background-color: #2196F3; }  /* Xanh biển nhạt - Skills */
-.education { background-color: #455A64; }  /* Xám than - Education */
+.about-me {
+    background-color: #B22222;
+}
+
+/* Đỏ đậm - About Me */
+.selected-work {
+    background-color: #004d40;
+}
+
+/* Xanh đậm - Selected Work */
+.contact {
+    background-color: #F9A825;
+    color: #333;
+}
+
+/* Vàng - Contact */
+.skills {
+    background-color: #2196F3;
+}
+
+/* Xanh biển nhạt - Skills */
+.education {
+    background-color: #455A64;
+}
+
+/* Xám than - Education */
 
 .button:hover {
     opacity: 0.9;
+}
+
+
+.info {
+    margin-top: 30px;
+    width: 100%;
+    height: max-content;
+}
+
+.name-info {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.name-info span {
+    font-size: 30px;
+
+}
+
+.review {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.info-container {
+    height: max-content;
+    width: 31%;
+}
+
+.info-container .title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.info-container .subtitle {
+    text-align: center;
+}
+
+.introduce {
+    font-family: 'Pacifico', cursive;
+    /* Phông chữ viết tay */
+    color: #b11241;
+    /* Màu đỏ rượu */
+    font-size: 2rem;
+    /* Kích thước lớn vừa phải */
+    top: 10px;
+    /* Dịch lên trên tạo cảm giác lồng vào */
+}
+
+.about-text {
+    display: block;
+    /* Đưa xuống dòng mới */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    /* Chữ đậm */
+    font-size: 4rem;
+    /* Kích thước lớn */
+    color: #000;
+    /* Màu đen */
+}
+
+.info-container .description {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.photo {
+    height: max-content;
+    width: 25%;
+
+    /* border: 8px solid #d11a41;
+    border-radius: 10px; */
+}
+
+.photo-container {
+    height: 20%;
+    width: 100%;
+    border-radius: 10%;
+    /* Khung tròn */
+
+}
+
+.photo-container img {
+    width: 55%;
+    object-fit: cover;
 }
