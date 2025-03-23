@@ -193,7 +193,7 @@ body {
 .script-text {
     color: #b0003a;
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+    font-size: rem;
     top: -10px;
 }
 
@@ -222,7 +222,6 @@ body {
 .button {
     padding: 10px 20px;
     border-radius: 8px;
-    border: 2px solid #333;
     color: #fff;
     font-weight: bold;
     text-align: center;
@@ -338,6 +337,8 @@ body {
 }
 
 .photo-container img {
+    padding: 20px;
+    background-color: #315a53;
     width: 55%;
     object-fit: cover;
 }
@@ -472,7 +473,7 @@ body {
 
 .work-item {
     padding: 0 77px;
-    margin-top: 20px;
+    margin-top: 83px;
 }
 
 .title-section {
@@ -483,7 +484,7 @@ body {
 }
 
 .description-section {
-    text-align:  left;
+    text-align: left;
     width: 100%;
     margin-bottom: 20px;
     font-size: 22px;
@@ -497,36 +498,52 @@ body {
 }
 
 .text-content {
-    text-align:  left;
+    text-align: left;
     width: 40%;
     font-size: 22px;
 }
 
 .image-grid {
     display: flex;
-    gap: 30px;       /* Khoảng cách giữa các ảnh */
-    height: 400px;   /* Giảm chiều cao của toàn bộ khung */
-    width: 55%;      /* Thu hẹp chiều rộng để ảnh nhỏ gọn hơn */
+    gap: 30px;
+    /* Khoảng cách giữa các ảnh */
+    height: 400px;
+    /* Giảm chiều cao của toàn bộ khung */
+    width: 55%;
+    /* Thu hẹp chiều rộng để ảnh nhỏ gọn hơn */
 }
 
 .image-box {
-    flex: 1;         /* Chia đều không gian cho các ảnh */
+    flex: 1;
+    /* Chia đều không gian cho các ảnh */
 }
 
 .image-box img {
-    width: 100%;     /* Chiều rộng đầy đủ trong khung */
-    height: 100%;    /* Chiều cao đầy đủ theo khung */
-    object-fit: cover; /* Đảm bảo ảnh không méo */
-    border-radius: 8px; /* Bo góc nhẹ */
+    width: 100%;
+    /* Chiều rộng đầy đủ trong khung */
+    height: 100%;
+    /* Chiều cao đầy đủ theo khung */
+    object-fit: cover;
+    /* Đảm bảo ảnh không méo */
+    border-radius: 8px;
+    /* Bo góc nhẹ */
+    padding: 20px;
+    background-color: #004d40;
 }
 
 
 .description-section p,
-.text-content p {
-    text-align: justify; /* Căn đều hai bên cho đẹp mắt */
-    text-indent: 40px;   /* Thụt đầu dòng 20px */
-    margin: 0;           /* Loại bỏ khoảng cách mặc định */
-    padding-left: 0;     /* Đảm bảo không có khoảng cách thừa */
+.text-content p,
+.text-content-2 p,
+.text-content-3 p {
+    text-align: justify;
+    /* Căn đều hai bên cho đẹp mắt */
+    text-indent: 40px;
+    /* Thụt đầu dòng 20px */
+    margin: 0;
+    /* Loại bỏ khoảng cách mặc định */
+    padding-left: 0;
+    /* Đảm bảo không có khoảng cách thừa */
 }
 
 
@@ -605,12 +622,71 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;   
-     transition: transform 0.3s ease;
+    font-weight: bold;
+    transition: transform 0.3s ease;
 
 }
 
 .icon-contact:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+
+.image-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 800px;
+    /* Điều chỉnh kích thước theo mong muốn */
+    height: 600px;
+    gap: 20px;
+    padding: 20px;
+    background-color: #b0003a;
+}
+
+.image-box-2 {
+    overflow: hidden;
+    border-radius: 8px;
+    /* Optional: adds a smooth border to images */
+}
+
+.image-box-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    /* Tuỳ chọn: bo góc nhẹ */
+}
+
+.text-content-2 {
+    text-align: left;
+    width: 50%;
+    font-size: 22px;
+}
+
+.text-content-3 {
+    text-align: left;
+    width: 70%;
+    font-size: 22px;
+}
+
+.image-grid-3 {
+    width: 500px;
+    height: 50px;
+
+}
+
+.image-box-3 {
+    flex: 1;
+    /* Chia đều không gian cho các ảnh */
+}
+
+.image-box-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #242424;
 }
