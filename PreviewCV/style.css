@@ -262,7 +262,7 @@ body {
 
 
 .info {
-    margin-top: 30px;
+    margin-top: 23px;
     width: 100%;
     height: max-content;
 }
@@ -400,7 +400,7 @@ body {
 }
 
 .option-right {
-    padding: 40px 15px;
+    padding: 40px 55px;
     display: flex;
     align-items: center;
 }
@@ -527,4 +527,90 @@ body {
     text-indent: 40px;   /* Thụt đầu dòng 20px */
     margin: 0;           /* Loại bỏ khoảng cách mặc định */
     padding-left: 0;     /* Đảm bảo không có khoảng cách thừa */
+}
+
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.year {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.content h3 {
+    margin: 0;
+    font-weight: bold;
+    color: #222;
+}
+
+.content p {
+    margin: 4px 0 0;
+    color: #666;
+}
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+
+.icon-contact {
+    width: max-content;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;   
+     transition: transform 0.3s ease;
+
+}
+
+.icon-contact:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
