@@ -33,7 +33,6 @@ body {
 
 .navbar-left {
     font-weight: bold;
-    cu
     font-size: 1.2rem;
     padding: 15px 30px;
 
@@ -494,7 +493,7 @@ body {
     display: flex;
     height: 20%;
     box-sizing: border-box;
-    gap: 75px;
+    gap: 50px;
 }
 
 .text-content {
